@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Amber!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebf0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        
+        .gift-box {
+            font-size: 24px;
+            background: #ff4081;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gift-box:active {
+            transform: scale(1.1);
+        }
+
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="gift-box" id="gift">
+        🎁 Tap to Open  
+    </div>
+    <div class="message" id="message">
+        <h2>Happy Birthday, Amber! 🎉</h2>
+        <p>You are the best gift in my life! Wishing you love, joy, and happiness today and always. 💖</p>
+    </div>
+
+    <script>
+        document.getElementById("gift").addEventListener("click", function() {
+            this.style.display = "none"; // Hide the gift box
+            document.getElementById("message").style.display = "block"; // Show message
+        });
+
+        // Fix for mobile touch issues
+        document.getElementById("gift").addEventListener("touchstart", function() {
+            this.style.display = "none"; // Hide the gift box
+            document.getElementById("message").style.display = "block"; // Show message
+        });
+    </script>
+</body>
+</html>
