@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffebf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+.gift-box {
+    font-size: 24px;
+    background: #ff4081;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.gift-box:active {
+    transform: scale(1.1);
+}
+
+.message {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
